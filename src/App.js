@@ -13,7 +13,8 @@ class App extends Component {
     };    
     
     handleAddFeadback = option => {      
-        this.setState({ [option]: this.state[option] + 1 });        
+        this.setState((prevState) =>
+            ({ [option]: prevState[option] + 1 }));
     };    
     
     countTotalFeedback = () => {      
