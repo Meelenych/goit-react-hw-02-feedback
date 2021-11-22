@@ -4,24 +4,27 @@ import PropTypes from 'prop-types';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage  }) => {
      
-         if (total === 0) {
+    if (total === 0) {
             
-            return (<div>                   
-                    <p>No feedback given</p>
-                </div>);
-        }
+        return (
+            <div>
+                <p>No feedback given</p>
+            </div>
+        );
+    }
 
-        else  {
+    else  {
             
-            return (<div>          
-            <p>Good: <span>{ good }</span></p>
-            <p>Neutral: <span>{ neutral }</span></p>
-            <p>Bad: <span>{bad}</span></p>
-            <p>Total: <span>{total}</span></p>
-            <p>Positive Feedback: <span>{ positivePercentage}</span>%</p>
-
-          </div>);
-        }
+        return (
+            <div>
+                <p>Good: <span>{ good }</span></p>
+                <p>Neutral: <span>{ neutral }</span></p>
+                <p>Bad: <span>{bad}</span></p>
+                <p>Total: <span>{total}</span></p>
+                <p>Positive Feedback: <span>{ positivePercentage}</span>%</p>
+            </div>
+        );
+    }
 
 
 }
